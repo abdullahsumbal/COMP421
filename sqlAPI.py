@@ -22,7 +22,8 @@ def dropTable(cursor, table_name):
 
 def clearTable(cursor, table_name, key):
     print("delete from "+table_name+" where "+key+"="+key+";")
-
     cursor.execute("delete from "+table_name+" where "+key+"="+key+";")
+
+
 
 

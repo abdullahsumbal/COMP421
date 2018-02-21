@@ -8,9 +8,10 @@ class spinBike:
         self.db = db
         self.cursor = db.cursor()
         self.serial_no = 100
-        self.spinbike_data = {}
-        number_of_record = 100
+        self.spin_bike_data = {}
+        number_of_record = 30
         list_of_tables = getTables(self.cursor)
+        clearTable(self.cursor, "spin_bike_usage", 'serial_no')
         clearTable(self.cursor, table_name, 'serial_no')
         db.commit()
         for i in range(number_of_record):
@@ -36,7 +37,7 @@ class spinBike:
              INSERT INTO spinbike (serial_no, brand_model, last_battery_charge_time, has_datacollector)
              VALUES (%(str1)s, %(str2)s, %(date)s, %(str3)s);
              """,{'str1': self.serial_no, 'str2': brand_model, 'date': last_batter_change_time, 'str3': has_datacollector})
-        self.spinbike_data[self.serial_no] = [brand_model, last_batter_change_time, has_datacollector]
+        self.spin_bike_data[self.serial_no] = [brand_model, last_batter_change_time, has_datacollector]
 
         self.db.commit()
 
