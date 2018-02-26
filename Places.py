@@ -6,7 +6,7 @@ class places:
         self.db = db
         self.cursor = db.cursor()
         self.place_id = 0
-        number_of_record = 10
+        number_of_record = 50
         clearTable(self.cursor, table_name, 'place_id')
         db.commit()
         for i in range(number_of_record):
@@ -15,7 +15,7 @@ class places:
     def populateData(self):
 
         # Model
-        addresses = ['Trottier building', 'McLeanna Library', 'Redpath Library', 'Old Music Building', 'New Music Building', 'New rez', 'Arts building']
+        addresses = ['Trottier building', 'McLennan Library', 'Redpath Library', 'Old Music Building', 'New Music Building', 'New Residence', 'Arts Building', 'Schulich Library', 'Wirth Music Building', 'Stewart Biology Building']
         address = addresses[random.randrange(len(addresses))]
         room_number = random.choice([random.randint(100,105),random.randint(210,220),random.randint(300,305)])
 
