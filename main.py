@@ -5,16 +5,21 @@ from SpinBike import spinBike
 from SpinBikeUsage import spinBikeUsage
 from Places import places
 from booking import Booking
+from time_schedule import TimeSchedule
+from maintenance import Maintenance
 
 def init_connection():
-    db = psycopg2.connect(host="comp421.cs.mcgill.ca", database="xxxx", user="xxxxx", password="xxxx")
+    db = psycopg2.connect()
 
     # SpinBikeUser(db)
     # bikeManager(db)
     # spin_bike = spinBike(db)
     # spinBikeUsage(db, spin_bike.spin_bike_data)
-    places(db)
+    #places(db)
     # Booking(db)
+    #TimeSchedule(db)
+    #Maintenance(db)
+
 
 
 
