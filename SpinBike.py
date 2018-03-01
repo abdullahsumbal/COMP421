@@ -31,7 +31,7 @@ class spinBike:
                                   timedelta(minutes=random.randrange(60)) +\
                                   timedelta(hours= random.randrange(12))
 
-        has_datacollector = "yes" if random.randrange(2) == 1 else "No"
+        has_datacollector = "Yes" if random.randrange(2) == 1 else "No"
 
         self.cursor.execute("""
              INSERT INTO spinbike (serial_no, brand_model, last_battery_charge_time, has_datacollector)

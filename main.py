@@ -18,7 +18,7 @@ def init_connection():
     #places(db)
     # Booking(db)
     #TimeSchedule(db)
-    #Maintenance(db)
+    Maintenance(db)
 
 
 
